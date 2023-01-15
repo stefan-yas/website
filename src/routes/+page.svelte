@@ -154,6 +154,7 @@
 		}
 		.contacts {
 			flex-direction: column;
+			align-items: flex-start;
 		}
 
 		.contacts a {
