@@ -1,7 +1,4 @@
 <script>
-	import Signature from './signature.svelte';
-	import Toast from './toast.svelte';
-
 	const title = "Hi, I'm Stefan";
 	const telegramIcon = '/telegram_icon.svg';
 	const elementIcon = '/element-messenger.svg';
@@ -48,47 +45,9 @@
 			</div>
 		</section>
 	</main>
-	<Signature />
-	<Toast />
 </body>
 
 <style>
-	:root {
-		--background-color: #dee2e6;
-		--font-color: #212529;
-		--secondary-font-color: #495057;
-		--font-family: 'Inter', sans-serif;
-		--border-radius: 5px;
-		--card-background-color: #e9ecef;
-		--padding: 3%;
-	}
-
-	:global(body) {
-		padding: var(--padding);
-		font-family: 'Courier New', Courier, monospace;
-		background-color: var(--background-color);
-		color: var(--font-color);
-		font-family: var(--font-family);
-	}
-
-	body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-	@font-face {
-		font-family: var(--font-family);
-		src: url('/inter.ttf');
-	}
-
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 2em;
-	}
 
 	h1 {
 		font-size: 5em;
