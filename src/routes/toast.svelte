@@ -3,10 +3,19 @@
 	onMount(async () => {
 		function toastNotification() {
 			let toast = document.getElementById('toast-notification');
-
+			toast.style.opacity = '0';
 			toast.style.display = 'block';
-
 			setTimeout(function () {
+				toast.style.transition = 'opacity 0.5s linear';
+				toast.style.opacity = '1';
+			}, 100);
+			setTimeout(function () {
+				toast.style.transition = 'opacity 0.5s linear';
+				toast.style.opacity = '0';
+			}, 2000);
+			setTimeout(function () {
+				toast.style.transition = 'opacity 0.5s linear';
+				toast.style.opacity = '0';
 				toast.style.display = 'none';
 			}, 3000);
 		}
