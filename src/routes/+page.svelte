@@ -75,6 +75,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 	}
 	@font-face {
 		font-family: var(--font-family);
@@ -162,7 +163,7 @@
 		}
 
 		.contacts a img {
-			width: 2em;
+			width: 3em;
 		}
 	}
 </style>
