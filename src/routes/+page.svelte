@@ -6,28 +6,36 @@
 		href: 'https://stefanyas.t.me',
 		src: '/telegram_icon.svg',
 		alt: 'telegram-icon',
-		name: 'Telegram'
+		name: 'Telegram',
+		target: '_blank',
+		id: 'telegram'
 	};
 
 	const email = {
 		href: 'mailto:stefan@stefanyas.me',
 		src: '/email_icon.svg',
 		alt: 'email-icon',
-		name: 'Email'
+		name: 'Email',
+		target: '_blank',
+		id: 'email'
 	};
 
 	const matrix = {
 		href: 'https://matrix.to/#/@stefan_yas:matrix.org',
 		src: '/element-messenger.svg',
 		alt: 'element-icon',
-		name: 'Matrix'
+		name: 'Matrix',
+		target: '_blank',
+		id: 'matrix'
 	};
 
 	const threema = {
 		href: 'https://threema.id/5AU7KBY5',
 		src: '/threema-messenger.svg',
 		alt: 'threema-icon',
-		name: 'Threema'
+		name: 'Threema',
+		target: '_blank',
+		id: 'threema'
 	};
 
 	const session = {
@@ -35,6 +43,7 @@
 		src: '/session_icon.svg',
 		alt: 'session-icon',
 		name: 'Session',
+		target: '_self',
 		id: 'session-id'
 	};
 
@@ -42,7 +51,9 @@
 		href: 'https://github.com/stefan-yas',
 		src: '/github logo.svg',
 		alt: 'github-icon',
-		name: 'GitHub'
+		name: 'GitHub',
+		target: '_blank',
+		id: 'github'
 	};
 </script>
 
@@ -54,18 +65,19 @@
 
 	<section class="block">
 		<div class="contacts">
-			<Contacts href={telegram.href} src={telegram.src} alt={telegram.alt} name={telegram.name} />
-			<Contacts href={email.href} src={email.src} alt={email.alt} name={email.name} />
-			<Contacts href={matrix.href} src={matrix.src} alt={matrix.alt} name={matrix.name} />
-			<Contacts href={threema.href} src={threema.src} alt={threema.alt} name={threema.name} />
+			<Contacts href={telegram.href} src={telegram.src} alt={telegram.alt} name={telegram.name} target={telegram.target} id={telegram.target}/>
+			<Contacts href={email.href} src={email.src} alt={email.alt} name={email.name} target={email.target} id={email.target}/>
+			<Contacts href={matrix.href} src={matrix.src} alt={matrix.alt} name={matrix.name} target={matrix.target} id={matrix.target}/>
+			<Contacts href={threema.href} src={threema.src} alt={threema.alt} name={threema.name} target={threema.target} id={threema.target}/>
 			<Contacts
 				id={session.id}
 				href={session.href}
 				src={session.src}
 				alt={session.alt}
 				name={session.name}
+				target={session.target}
 			/>
-			<Contacts href={github.href} src={github.src} alt={github.alt} name={github.name} />
+			<Contacts href={github.href} src={github.src} alt={github.alt} name={github.name} target={github.target} id={github.target}/>
 		</div>
 	</section>
 </main>
