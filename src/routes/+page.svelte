@@ -65,10 +65,38 @@
 
 	<section class="block">
 		<div class="contacts">
-			<Contacts href={telegram.href} src={telegram.src} alt={telegram.alt} name={telegram.name} target={telegram.target} id={telegram.target}/>
-			<Contacts href={email.href} src={email.src} alt={email.alt} name={email.name} target={email.target} id={email.target}/>
-			<Contacts href={matrix.href} src={matrix.src} alt={matrix.alt} name={matrix.name} target={matrix.target} id={matrix.target}/>
-			<Contacts href={threema.href} src={threema.src} alt={threema.alt} name={threema.name} target={threema.target} id={threema.target}/>
+			<Contacts
+				href={telegram.href}
+				src={telegram.src}
+				alt={telegram.alt}
+				name={telegram.name}
+				target={telegram.target}
+				id={telegram.target}
+			/>
+			<Contacts
+				href={email.href}
+				src={email.src}
+				alt={email.alt}
+				name={email.name}
+				target={email.target}
+				id={email.target}
+			/>
+			<Contacts
+				href={matrix.href}
+				src={matrix.src}
+				alt={matrix.alt}
+				name={matrix.name}
+				target={matrix.target}
+				id={matrix.target}
+			/>
+			<Contacts
+				href={threema.href}
+				src={threema.src}
+				alt={threema.alt}
+				name={threema.name}
+				target={threema.target}
+				id={threema.target}
+			/>
 			<Contacts
 				id={session.id}
 				href={session.href}
@@ -77,7 +105,14 @@
 				name={session.name}
 				target={session.target}
 			/>
-			<Contacts href={github.href} src={github.src} alt={github.alt} name={github.name} target={github.target} id={github.target}/>
+			<Contacts
+				href={github.href}
+				src={github.src}
+				alt={github.alt}
+				name={github.name}
+				target={github.target}
+				id={github.target}
+			/>
 		</div>
 	</section>
 </main>
