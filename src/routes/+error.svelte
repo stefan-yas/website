@@ -1,9 +1,9 @@
 <body>
-<main>
-	<h1>4<span id="spin">0</span>&nbsp;&nbsp;4</h1>
-	<h3>There's nothing here...</h3>
-	<button><a href="/">Let's get you home</a></button>
-</main>
+	<main>
+		<h1>4<span id="spin">0</span>&nbsp;&nbsp;4</h1>
+		<h3>There's nothing here...</h3>
+		<button><a href="/">Let's get you home</a></button>
+	</main>
 </body>
 
 <style>
@@ -19,9 +19,5 @@
 		to {
 			transform: rotate(360deg);
 		}
-	}
-
-	button {
-		white-space: nowrap;
 	}
 </style>

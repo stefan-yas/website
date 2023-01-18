@@ -51,6 +51,7 @@
 		border-radius: var(--border-radius);
 		width: fit-content;
 		padding: var(--padding);
+		color: var(--secondary-button-font-color);
 	}
 
 	.toast-content {

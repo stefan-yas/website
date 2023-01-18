@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="user">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Internet home of Stefan Yas. Use these links if you'd like to get in touch!."
+			content="Internet home of Stefan Yas. Use these links if you'd like to get in touch!"
 		/>
 		<script
 			data-goatcounter="https://stefanyas.goatcounter.com/count"
@@ -19,3 +19,89 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
+
+<style global>
+	:root {
+		--background-color: #dee2e6;
+		--font-color: #212529;
+		--secondary-font-color: #495057;
+		--font-family: 'Inter', sans-serif;
+		--border-radius: 5px;
+		--card-background-color: #e9ecef;
+		--padding: 3%;
+		--button-background-color: #ced4da;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root[color-mode='user'] {
+			--background-color: #212529;
+			--font-color: #6c757d;
+			--secondary-font-color: #212529;
+			--card-background-color: #495057;
+			--button-background-color: #f8f9fa;
+			--secondary-button-font-color: #212529;
+		}
+	}
+
+	html {
+		font-size: 16px;
+	}
+
+	body {
+		padding: var(--padding);
+		font-family: 'Courier New', Courier, monospace;
+		background-color: var(--background-color);
+		color: var(--font-color);
+		font-family: var(--font-family);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	@font-face {
+		font-family: var(--font-family);
+		src: url('/inter.ttf');
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2em;
+	}
+
+	button {
+		font-weight: bold;
+		font-size: 1em;
+		border-radius: var(--border-radius);
+		background-color: var(--button-background-color);
+		color: var(--secondary-font-color);
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+	}
+
+	button:hover {
+		transform: scale(1.01);
+	}
+
+	button a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 1em;
+	}
+
+	a {
+		color: var(--font-color);
+		text-decoration: none;
+	}
+
+	a:visited {
+		color: var(--font-color);
+	}
+</style>
