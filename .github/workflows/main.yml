@@ -1,19 +1,14 @@
 name: End-to-end tests
 on: [push]
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
+ cypress-run:
+   runs-on: ubuntu-latest
+   steps:
+      - name: Checkout GitCode
         uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v5
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: 'Installing dependencies'    
-        run: npm i
-      - name: 'Starting server'
-        run: npm run build
-      - name: 'Cypress Tests'
-        run: npm run cypress:headless
+          command: npx cypress run
+          browser: chrome
