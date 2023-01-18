@@ -1,4 +1,4 @@
-<img src="/signature.png" alt="footer-signature" />
+<img alt="footer-signature" />
 
 <style>
 	img {
@@ -6,6 +6,13 @@
 		bottom: 1em;
 		width: 5em;
 		opacity: 0.5;
+		content: url(/signature.png);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		img {
+			content: url(/signaturedark.png);
+		}
 	}
 
 	@media only screen and (max-height: 700px) {

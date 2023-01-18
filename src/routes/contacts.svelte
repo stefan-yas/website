@@ -4,9 +4,10 @@
 	export let alt;
 	export let name;
 	export let id;
+	export let target;
 </script>
 
-<a {id} {href} target="_blank" rel="noreferrer"
+<a {id} {href} {target} rel="noreferrer"
 	><img {src} {alt} />
 	<p>{name}</p></a
 >
