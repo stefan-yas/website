@@ -11,9 +11,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: 'Installing deps'    
+      - name: 'Installing dependencies'    
         run: npm i
       - name: 'Starting server'
-        run: npm run dev
+        run: npm run build
       - name: 'Cypress Tests'
         run: npm run cypress:headless
