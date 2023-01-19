@@ -4,11 +4,30 @@ jobs:
  cypress-run:
    runs-on: ubuntu-latest
    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+
+      - name: npm install
+        run: npm install --cache /tmp/empty-cache
+
+      - name: build
+        run: npm run build
+          
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: .
+
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Run Cypress Test
         uses: cypress-io/github-action@v5
         with:
-          command: npm run build & npm run dev && npx cypress run
+          command: npm run cypress:headless
           browser: chrome
