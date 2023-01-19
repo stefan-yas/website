@@ -1,21 +1,17 @@
-name: End-to-end tests
+name: Cypress Tests
+
 on: [push]
+
 jobs:
-  e2e:
-
+  cypress-run:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: 'Installing deps'    
-      run: npm i
-    - name: 'Cy test'
-      run: npm run cypress:headless
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.2.0 # use the explicit version number
+        with:
+          build: npm run build
+          start: npm run dev
