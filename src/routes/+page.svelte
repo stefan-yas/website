@@ -58,12 +58,12 @@
 </script>
 
 <head>
-	<title>{title}</title>
+	<title data-aos="zoom-in-right">{title}</title>
 </head>
 <main>
-	<h1>{title}</h1>
+	<h1 data-aos="zoom-in-left" data-aos-duration="1500">{title}</h1>
 
-	<section class="block">
+	<section class="block" data-aos="zoom-in-right" data-aos-duration="1500">
 		<div class="contacts">
 			<Contacts
 				href={telegram.href}
